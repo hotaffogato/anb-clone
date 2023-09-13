@@ -1,9 +1,11 @@
 import './App.css';
 import { NavTop, NavBottom } from './components/NavArea.js'
-// import {MainArea} from './components/MainArea.js'
-// import {FooterArea} from './components/FooterArea.js'
+import {MainArea} from './components/MainArea.js'
+import {FooterArea} from './components/FooterArea.js'
 
 function App() {
+  let show = false
+
   return (
     <div className="App">
       <NavTop />
@@ -12,8 +14,9 @@ function App() {
       <div className='divider'></div>
       </header>
 
-      {/* <MainArea />
-      <FooterArea /> */}
+      {show ? <MainArea /> : null}
+      {show ? <FooterArea /> : null}
+      
     </div>
   );
 }
