@@ -8,7 +8,7 @@ const NavTop = () => {
 
   return (
     <>
-      <nav className='navbar__1'>
+      <nav className='nav-top'>
         
         <span id='logo'>
           <i className="fa-brands fa-airbnb"></i>
@@ -39,7 +39,7 @@ const NavTop = () => {
             
           {/* <!-- Button trigger modal --> */}
           <button type="button" className="nav-border" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <i className="fa-solid fa-globe"></i>
+            <i className="fa-solid fa-globe" />
           </button>
 
           {/* <!-- Modal --> */}
@@ -95,23 +95,23 @@ const NavTop = () => {
       {toggle ? <nav className='nav-bottom'>
         <div className='round-wrap__2'>
           <span className='round-wrap__3'>
-            <div>여행지</div>
+            <div className='text__1'>여행지</div>
             <div>여행지 검색</div>
           </span>
           <span className='divider' />
           <span className='round-wrap__3'>
-            <div>체크인</div>
+            <div className='text__1'>체크인</div>
             <div>날짜 추가</div>
           </span>
           <span className='divider' />
           <span className='round-wrap__3'>
-            <div>체크아웃</div>
+            <div className='text__1'>체크아웃</div>
             <div>날짜 추가</div>
           </span>
           <span className='divider' />
           <span className='round-wrap__3'>
             <span>
-              <div>여행자</div>
+              <div className='text__1'>여행자</div>
               <div>게스트 추가</div>
             </span>
             <span id='search'>
@@ -120,7 +120,7 @@ const NavTop = () => {
           </span>
         </div>
       </nav> : null}
-      {toggle ? <div className='black-back'></div> : null}
+      {toggle ? <div className='black-back' /> : null}
 
       {show ? <div className='nav-bottom'>
         <div className='round-wrap__1'>
@@ -128,7 +128,7 @@ const NavTop = () => {
             <i className="fa-solid fa-magnifying-glass"></i>
           </span>
           <span>
-            <span>어디든지</span>
+            <span className='text__1'>어디든지</span>
             <span>언제든 일주일 · 게스트 추가</span>
           </span>
         </div>
@@ -140,7 +140,7 @@ const NavTop = () => {
 
 const NavBottom = () => {
   return(
-    <nav className='navbar__1'>
+    <nav className='nav-top'>
       <div className="paddles">
         <span className="left-paddle paddle-back hidden"></span>
         <button className="left-paddle paddle hidden">
