@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       <NavTop />
+      <div className='divider-column' />
       <header className="App-header">
       <NavBottom />
-      <div className='divider'></div>
       </header>
 
       {show ? <MainArea /> : null}
