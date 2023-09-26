@@ -50,11 +50,25 @@ table {
 }
 
 /* =========================== */
-/* header */
+/* 기본 세팅 */
 /* =========================== */
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+button {
+    cursor: pointer;
+	border: none;
+	background-color: transparent;
+}
 
 a:link {
 	text-decoration: none;
+	cursor: pointer;
 }
 
 li {
@@ -65,11 +79,18 @@ li {
 	display: none;
 }
 
-@font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+.btn-group {
+    background-color: #fff;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* =========================== */
+/* header ~ nav bar */
+/* =========================== */
+
+.header-nav {
+	position: sticky;
 }
 
 .divider-column {

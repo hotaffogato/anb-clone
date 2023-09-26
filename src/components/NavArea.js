@@ -43,7 +43,7 @@ const NavTop = () => {
 
         <span className='nav-top__end'>
           <span>
-            <span>당신의 공간을 에어비앤비하세요</span>
+            <p>당신의 공간을 에어비앤비하세요</p>
             <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <i className="fa-solid fa-globe" />
             </button>
@@ -99,6 +99,7 @@ const NavTop = () => {
           </div>
 
         </span>
+        <div className='divider-column' />
       </nav>
 
 
@@ -152,113 +153,30 @@ const NavTop = () => {
 
 const NavBottom = () => {
   return(
-    <nav className='nav-bottom'>
-      <div className="paddles">
-        <div className='paddle-left__back paddle-wrapper'>
-          <button className="paddle-left paddle">
-            <i class="fa-solid fa-angle-left"></i>
-          </button>
+    <header className='nav-bottom'>
+      <div className='nav-bottom__icon-wrapper'>
+        <div className="paddles">
+          <div className='paddle-left__back paddle-wrapper'>
+            <button className="paddle-left paddle-btn">
+              <i className="fa-solid fa-angle-left"></i>
+            </button>
+          </div>
         </div>
-        <div className='paddle-rigth__back paddle-wrapper'>
-          <button className="paddle-right paddle">
-            <i class="fa-solid fa-angle-right"></i>
-          </button>
+        <ul className='nav-bottom__icons'>
+          <li>
+            <i className="fa-regular fa-star"></i>
+            <div>최고의 전망</div>
+          </li>
+          
+        </ul>
+        <div className="paddles">
+          <div className='paddle-rigth__back paddle-wrapper'>
+            <button className="paddle-right paddle-btn">
+              <i className="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
         </div>
       </div>
-      <ul className='nav-bottom__icons'>
-        <li>
-          <i className="fa-regular fa-star"></i>
-          <div>최고의 전망</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-bed"></i>
-          <div>방</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-hotel"></i>
-          <div>호텔</div>
-        </li>
-        <li>
-          <i className="fa-regular fa-building"></i>
-          <div>도시</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-mug-saucer"></i>
-          <div>B&B</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-utensils"></i>
-          <div>레스토랑</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-tree"></i>
-          <div>한적한 시골</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-wine-bottle"></i>
-          <div>와인 농장</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-otter"></i>
-          <div>동물원</div>
-        </li>
-        <li>
-        <i className="fa-solid fa-gamepad"></i>
-          <div>키즈</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-tower-observation"></i>
-          <div>타워</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-mountain"></i>
-          <div>고지대</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-palette"></i>
-          <div>전시</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-golf-ball-tee"></i>
-          <div>골프장</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-key"></i>
-          <div>신규</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-house-tsunami"></i>
-          <div>호숫가</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-person-swimming"></i>
-          <div>해변 근처</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-campground"></i>
-          <div>캠프</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-sailboat"></i>
-          <div>보트</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-ship"></i>
-          <div>섬</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-ship"></i>
-          <div>섬</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-ship"></i>
-          <div>섬</div>
-        </li>
-        <li>
-          <i className="fa-solid fa-ship"></i>
-          <div>섬</div>
-        </li>
-      </ul>
       
       <span className='nav-bottom__end btn-group'>
         <span>
@@ -266,7 +184,7 @@ const NavBottom = () => {
           <span>필터</span>
         </span>
       </span>
-    </nav>
+    </header>
   )
 }
 

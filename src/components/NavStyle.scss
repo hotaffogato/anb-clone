@@ -1,5 +1,13 @@
-.nav-top * {
-    border : 1px solid #00ff55;
+// body * {border : 1px solid #00ff55;}
+
+header {
+    background-color: #fff;
+}
+
+.btn-group {
+    span:nth-child(odd), span:last-child {
+        cursor: pointer;
+    }
 }
 
 .nav-top,
@@ -23,69 +31,74 @@
     justify-content: end;
     align-items: center;
     flex-grow: 0.5;
+    span {
+        display: flex;
+    }
+    p {
+        line-height: 42px;
+    }
 }
+
 .nav-top__mid {
     justify-content: center;
+    padding: 15px 0;
 }
 
-.btn-group {
-    background-color: #fff;
-    align-items: center;
-    border: 1px solid red;
-    border-radius: 10px;
-}
-
-.nav-bottom {
-    margin: auto;
+.nav-bottom,.nav-bottom__icon-wrapper {
     display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 
-.paddles {
-    position: relative;
+.nav-bottom__icon-wrapper {
+    width: calc(95vw - 90px);
+    justify-content: flex-start;
 }
 
 .paddle-wrapper {
-    background-color: red;
     position: absolute;
-    height: 4rem;
-    top: -16px;
-}
-
-.paddle {
-    position: relative;
-    top:16px;
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    padding: 5px 8px;
-    text-align: center;
+    height: 3.5rem;
+    top: 4px;
+    .paddle-btn {
+        position: relative;
+        top: 12px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        padding: 5px 8px;
+        text-align: center;
+        cursor: pointer;
+    }
 }
-
-.paddle-right {
-    right:0;
-}
+.paddle-rigth__back { left: calc(95vw - 120px); }
 
 .nav-bottom__icons {
-    text-align: center;
-    justify-content: space-between;
-    flex-grow: 4;
+    color: #5F5F5F;
+    position: relative;
     display: flex;
     font-size: 1rem;
     overflow: hidden;
+    text-align: center;
+    align-items: center;
+    li {
+        min-width: 80px;
+        cursor: pointer;
+        margin: 5px;
+    }
+    i {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    div {font-size: 0.8rem;}
 }
-
 
 .nav-bottom__end {
     display: flex;
-    width: 5rem;
+    min-width: 5rem;
     height: 3rem;
     background-color: #ddd;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-}
-
-.nav-bottom {
-    color: #5F5F5F;
-    margin-top : 10px;
 }
