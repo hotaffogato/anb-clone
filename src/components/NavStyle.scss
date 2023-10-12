@@ -4,15 +4,23 @@ header {
     background-color: #fff;
 }
 
+nav {
+    width: 95vw;
+    * {
+    transition: all .3s;
+}
+}
+
 .btn-group {
     span:nth-child(odd), span:last-child {
         cursor: pointer;
     }
 }
-
+.nav-top {
+    height: 80px;
+}
 .nav-top,
 .nav-bottom {
-    width:95vw;
     display: flex;
     margin: auto;
     justify-content: space-between;
@@ -97,8 +105,12 @@ header {
     display: flex;
     min-width: 5rem;
     height: 3rem;
-    background-color: #ddd;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    border: 1px solid #ddd;
+}
+
+.hidden {
+    display: none;
 }

@@ -1,11 +1,13 @@
 import '../App.css';
 import './NavStyle.scss';
-import { useState } from 'react';
 
-const NavTop = () => {
-
-  let [toggle, setToggle] = useState(false);
-  let [show, setShow] = useState(false);
+const NavArea = () => {
+  const navToggle = () => {
+    const toggleArea = document.querySelectorAll("#toggle")
+    toggleArea.forEach(e=>{
+      e.classList.toggle("hidden")
+    })
+  }
 
   return (
     <header>
@@ -16,34 +18,31 @@ const NavTop = () => {
           <div>airbnb</div>
         </span>
 
-
         {/* 토글 구간 */}
 
-        { toggle ?
-        <span className='nav-top__mid'>
+        <span className='nav-top__mid hidden' onClick={navToggle} id='toggle'>
           <span>숙소</span>
           <span>체험</span>
           <span>온라인 체험</span>
         </span>
-        : null}
-        
-        { toggle ? null :
-          <span className='nav-top__mid' onClick={()=>{setToggle(true)}}>
-            <span className='btn-group'>
-              <span>어디든지</span>
-              <span className='divider'></span>
-              <span>언제든 일주일</span>
-              <span className='divider'></span>
-              <span>게스트 추가</span>
-              <span id='search'><i className="fa-solid fa-magnifying-glass"></i></span>
-            </span>
-        </span>}
+
+        <span className='nav-top__mid' onClick={navToggle} id='toggle'>
+          <span className='btn-group'>
+            <span>어디든지</span>
+            <span className='divider'></span>
+            <span>언제든 일주일</span>
+            <span className='divider'></span>
+            <span>게스트 추가</span>
+            <span id='search'><i className="fa-solid fa-magnifying-glass"></i></span>
+          </span>
+        </span>
 
         {/* 토글 구간 */}
 
         <span className='nav-top__end'>
           <span>
             <p>당신의 공간을 에어비앤비하세요</p>
+
             <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <i className="fa-solid fa-globe" />
             </button>
@@ -61,10 +60,10 @@ const NavTop = () => {
                 <li><a className="dropdown-item" href="/">도움말 센터</a></li>
               </ul>
             </div>
-            {/* 드롭다운 */}
-              
-            {/* <!-- Button trigger modal --> */}
           </span>
+
+          {/* 드롭다운 */}
+          {/* <!-- Button trigger modal --> */}
           {/* <!-- Modal --> */}
           <div className="modal fade" id="exampleModal" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div className="modal-dialog">
@@ -93,19 +92,15 @@ const NavTop = () => {
                   </div>
                   <div className='modal-text3'>언어와 지역을 선택하세요</div>
                 </div>
-
               </div>
             </div>
           </div>
-
         </span>
-        <div className='divider-column' />
       </nav>
-
 
       {/* 토글 구간__2 */}
 
-      {toggle ? <nav className='nav-top__mid'>
+      <nav className='nav-top__mid' id='toggle'>
         <div className='btn-group'>
           <span>
             <div>여행지</div>
@@ -132,60 +127,44 @@ const NavTop = () => {
             </span>
           </span>
         </div>
-      </nav> : null}
-      {toggle ? <div className='black-back' /> : null}
+      </nav>
 
-      {show ? <div className='nav-top__mid'>
-        <div>
-          <span>
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </span>
-          <span>
-            <span>어디든지</span>
-            <span>언제든 일주일 · 게스트 추가</span>
-          </span>
-        </div>
-        <span><i className="fa-solid fa-sliders"></i></span>
-      </div> : null}
-    </header>
-  )
-}
+      <div className='divider-column' />
 
-const NavBottom = () => {
-  return(
-    <header className='nav-bottom'>
-      <div className='nav-bottom__icon-wrapper'>
-        <div className="paddles">
-          <div className='paddle-left__back paddle-wrapper'>
-            <button className="paddle-left paddle-btn">
-              <i className="fa-solid fa-angle-left"></i>
-            </button>
+      <nav className='nav-bottom'>
+        <div className='nav-bottom__icon-wrapper'>
+          <div className="paddles">
+            <div className='paddle-left__back paddle-wrapper'>
+              <button className="paddle-left paddle-btn">
+                <i className="fa-solid fa-angle-left"></i>
+              </button>
+            </div>
+          </div>
+          <ul className='nav-bottom__icons'>
+            <li>
+              <i className="fa-regular fa-star"></i>
+              <div>최고의 전망</div>
+            </li>
+            
+          </ul>
+          <div className="paddles">
+            <div className='paddle-rigth__back paddle-wrapper'>
+              <button className="paddle-right paddle-btn">
+                <i className="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
           </div>
         </div>
-        <ul className='nav-bottom__icons'>
-          <li>
-            <i className="fa-regular fa-star"></i>
-            <div>최고의 전망</div>
-          </li>
-          
-        </ul>
-        <div className="paddles">
-          <div className='paddle-rigth__back paddle-wrapper'>
-            <button className="paddle-right paddle-btn">
-              <i className="fa-solid fa-angle-right"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-      
-      <span className='nav-bottom__end btn-group'>
-        <span>
-          <span><i className="fa-solid fa-sliders"></i></span>
-          <span>필터</span>
+        <span className='nav-bottom__end btn-group'>
+          <span>
+            <span><i className="fa-solid fa-sliders"></i></span>
+            <span>필터</span>
+          </span>
         </span>
-      </span>
+      </nav>
+      <div className='divider-column' />
     </header>
   )
 }
 
-export {NavTop, NavBottom}
+export {NavArea}
